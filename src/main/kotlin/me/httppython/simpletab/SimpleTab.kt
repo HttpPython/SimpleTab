@@ -30,7 +30,7 @@ class SimpleTab: JavaPlugin() {
         var pluginManager : PluginManager = Bukkit.getPluginManager()
         pluginManager.registerEvents(JoinListener(), this)
         pluginManager.registerEvents(QuitListener(), this)
-        Bukkit.getConsoleSender().sendMessage("${consolePrefix}The Plugin is now ready to use!")
+        Bukkit.getConsoleSender().sendMessage("${consolePrefix}§aThe Plugin is now ready to use!")
         for(p in Bukkit.getOnlinePlayers()) {
             p.setPlayerListHeaderFooter(ChatColor.translateAlternateColorCodes('&', config.getString("Header")!!.replace("%players%", Bukkit.getOnlinePlayers().size.toString()).replace("%max_players%", Bukkit.getMaxPlayers().toString()))
                 , ChatColor.translateAlternateColorCodes('&', config.getString("Footer")!!.replace("%players%", Bukkit.getOnlinePlayers().size.toString()).replace("%max_players%", Bukkit.getMaxPlayers().toString())))
@@ -38,7 +38,7 @@ class SimpleTab: JavaPlugin() {
     }
 
     override fun onDisable() {
-        Bukkit.getConsoleSender().sendMessage("${consolePrefix}Bye!")
+        Bukkit.getConsoleSender().sendMessage("${consolePrefix}§cBye!")
     }
 
 }
