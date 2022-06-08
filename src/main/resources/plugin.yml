@@ -1,0 +1,4 @@
+name: SimpleTab
+version: 1.0
+main: me.httppython.simpletab.SimpleTab
+api-version: 1.18
